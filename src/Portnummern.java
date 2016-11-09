@@ -2,7 +2,7 @@ import java.io.*;
 
 /**
  * Created by Marvin Kirsch on 09.11.2016.
- * C12
+ * Matrikelnr.: 11118687
  * Aufgabenblatt 2 - "Kontrollstrukturen und Algorithmen"
  */
 public class Portnummern {
