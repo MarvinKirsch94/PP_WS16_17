@@ -13,7 +13,7 @@ public class Caesarchiffre {
         do {
             System.out.println("Geben sie den Schluessel ein: ");
             key = Integer.parseInt(in.readLine());
-        } while(key < 1 || key >= 25);
+        } while(key < 1 || key > 25);
         System.out.println("Geben sie eine Zeichenkette ein: ");
         StringBuffer chiffre = new StringBuffer(in.readLine());
         System.out.println("\nWollen sie die Zeichenkette entschluesseln oder verschluesseln ?(e or v");
