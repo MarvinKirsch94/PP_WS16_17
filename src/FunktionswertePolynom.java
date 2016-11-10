@@ -36,7 +36,7 @@ public class FunktionswertePolynom {
             }
         }
         System.out.println("Ausgabe");
-        for(int ii = 0;ii<k+2;ii++) {
+        for(int ii = 0;ii<container.length;ii++) {
             System.out.println("f(" + container[ii] + ") = " + (a*Math.pow(container[ii],2)+b*container[ii]+c));
         }
     }
