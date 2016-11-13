@@ -16,7 +16,7 @@ public class Caesarchiffre {
         } while(key < 1 || key > 25);
         System.out.println("Geben sie eine Zeichenkette ein: ");
         StringBuffer chiffre = new StringBuffer(in.readLine());
-        System.out.println("\nWollen sie die Zeichenkette entschluesseln oder verschluesseln ?(e or v");
+        System.out.println("\nWollen sie die Zeichenkette entschluesseln oder verschluesseln ?(e or v)");
         String antwort = "a";
         while(!(antwort.equalsIgnoreCase("entschluesseln") || antwort.equalsIgnoreCase("verschluesseln") || antwort.equalsIgnoreCase("e") || antwort.equalsIgnoreCase("v"))) {
             antwort = in.readLine();
