@@ -24,7 +24,7 @@ public class InternetAdressen {
         int p = Integer.parseInt(in.readLine());
         System.out.println("Geben sie die symbolische Adresse ein: ");
         String sa = in.readLine();
-        System.out.println("kontrollausgabe\n" + g1 + "." + g2 + "." + g3 + "." + g4 + ":" + p + "," + sa);
+        System.out.println("kontrollausgabe: \n" + g1 + "." + g2 + "." + g3 + "." + g4 + ":" + p + "," + sa);
         System.out.println("Laenge der Symbolischen Adresse: " + sa.length());
         System.out.println("Beginnt die Adresse mit (www.): " + sa.startsWith("www."));
         StringBuffer newSA = new StringBuffer(sa);
