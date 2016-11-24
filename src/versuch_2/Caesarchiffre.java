@@ -1,3 +1,5 @@
+package versuch_2;
+
 import java.io.*;
 
 /**

@@ -1,3 +1,5 @@
+package versuch_1;
+
 /**
  * Created by Marvin Kirsch, Zarko Prastalo on 20.10.2016.
  * C12
