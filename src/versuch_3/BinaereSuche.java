@@ -25,44 +25,24 @@ public class BinaereSuche {
         System.out.println("Eingabe abgeschlossen.\n" +
                 "Geben sie das Wort nach dem gesucht werden soll ein: ");
         String suche = in.readLine();
-        System.out.println("Der Wert wurde an der Stelle : " + (sucheWort(feld, suche) < 0 ? "\nDas Wort konnte nicht gefunden werden :(" : sucheWort(feld, suche)));
+        int re = sucheWort(feld, suche);
+        System.out.println("Der Wert wurde " + (re < 0 ? "nicht gefunden :(" : ("an der Stelle: " + re + " gefunden.")));
     }
 
     private static int sucheWort(String feld[], String suche) {
-        int mitte;
-        //int pos;
-        String newFeldL[];
-        String newFeldR[];
+        int li = 0, mi, re = feld.length -1;
         while(true) {
-            for (String aFeld : feld) {
-                System.out.println(aFeld);
-            }
-            mitte = (feld.length) / 2;
-            if (feld[mitte].equals(suche)) {
-                return mitte;
-            } else {
-                if(feld.length <= 1) return -1;
-                for (int x = 0; x < feld[mitte].length(); x++) {
-                    System.out.println("hey");
-                    if (!(feld[mitte].charAt(x) == suche.charAt(x))) {
-                        if (feld[mitte].charAt(x) > suche.charAt(x)) {
-                            //left
-                            System.out.println("left");
-                            newFeldL = new String[mitte];
-                            System.arraycopy(feld, 0, newFeldL, 0, mitte);
-                            feld = newFeldL;
-                            break;
-                        } else {
-                            //right
-                            System.out.println("right");
-                            newFeldR = new String[mitte];
-                            System.arraycopy(feld, mitte + 1, newFeldR, 0, feld.length - mitte);
-                            for (int z = 0; z < mitte; z++) {
-                                newFeldR[z] = feld[z + mitte + 1];
-                            }
-                            feld = newFeldR;
-                            break;
-                        }
+            mi = (int)Math.ceil((re+li)/2.0);
+            if(feld[mi].equals(suche)) return mi;
+            if(li == re) return -1;
+            for(int x = 0; x < feld[mi].length(); x++) {
+                if(!(feld[mi].charAt(x) == suche.charAt(x))) {
+                    if(suche.charAt(x) > feld[mi].charAt(x)) {
+                        li = mi + 1;
+                        break;
+                    } else {
+                        re = mi - 1;
+                        break;
                     }
                 }
             }
