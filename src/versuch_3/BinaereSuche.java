@@ -28,14 +28,14 @@ public class BinaereSuche {
         System.out.println("Der Wert wurde an der Stelle : " + (sucheWort(feld, suche) < 0 ? "\nDas Wort konnte nicht gefunden werden :(" : sucheWort(feld, suche)));
     }
 
-    public static int sucheWort(String feld[], String suche) {
+    private static int sucheWort(String feld[], String suche) {
         int mitte;
-        int pos;
+        //int pos;
         String newFeldL[];
         String newFeldR[];
         while(true) {
-            for(int i = 0; i < feld.length; i++) {
-                System.out.println(feld[i]);
+            for (String aFeld : feld) {
+                System.out.println(aFeld);
             }
             mitte = (feld.length) / 2;
             if (feld[mitte].equals(suche)) {
@@ -49,9 +49,7 @@ public class BinaereSuche {
                             //left
                             System.out.println("left");
                             newFeldL = new String[mitte];
-                            for (int y = 0; y < mitte; y++) {
-                                newFeldL[y] = feld[y];
-                            }
+                            System.arraycopy(feld, 0, newFeldL, 0, mitte);
                             feld = newFeldL;
                             break;
                         } else {
