@@ -26,7 +26,7 @@ public class BinaereSuche {
                 "Geben sie das Wort nach dem gesucht werden soll ein: ");
         String suche = in.readLine();
         int re = sucheWort(feld, suche);
-        System.out.println("Der Wert wurde " + (re < 0 ? "nicht gefunden :(" : ("an der Stelle: " + re + " gefunden.")));
+        System.out.println("Der Wert: " + suche + "\nwurde " + (re < 0 ? "nicht gefunden :(" : ("an der Stelle: " + re + " gefunden.")));
     }
 
     private static int sucheWort(String feld[], String suche) {
