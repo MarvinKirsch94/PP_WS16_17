@@ -25,8 +25,6 @@ public class Hashwert {
             } while(!(antwort.equals("y") || antwort.equals("n")));
             if(antwort.equals("n")) {
                 return;
-            } else {
-                continue;
             }
         }
     }
