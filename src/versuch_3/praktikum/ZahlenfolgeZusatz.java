@@ -18,7 +18,7 @@ public class ZahlenfolgeZusatz {
             z1 = Integer.parseInt(in.readLine());
             System.out.println("Geben sie z2 ein: ");
             z2 = Integer.parseInt(in.readLine());
-        } while(z1 < 1 || z2 < z1);
+        } while(z1 < 0 || z2 < z1);
         do {
             System.out.println("Geben sie einen Wert fuer t ein: ");
             t = Integer.parseInt(in.readLine());
