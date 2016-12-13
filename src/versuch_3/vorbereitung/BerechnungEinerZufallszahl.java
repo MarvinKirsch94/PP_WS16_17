@@ -1,4 +1,4 @@
-package versuch_3;
+package versuch_3.vorbereitung;
 
 import java.io.BufferedReader;
 import java.io.IOException;
