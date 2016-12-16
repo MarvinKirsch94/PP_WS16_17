@@ -1,11 +1,5 @@
 package versuch_3.praktikum;
 
-import java.math.BigDecimal;
-
-/**
- * Created by Marvin Kirsch on 09.12.2016.
- * Matrikelnr.: 11118687
- */
 public class Funktion {
     public static void main(String args[]) {
         auqvf();

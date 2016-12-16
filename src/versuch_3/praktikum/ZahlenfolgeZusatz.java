@@ -4,10 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Created by Marvin Kirsch on 09.12.2016.
- * Matrikelnr.: 11118687
- */
 public class ZahlenfolgeZusatz {
 
     public static void main(String args[]) throws IOException {
