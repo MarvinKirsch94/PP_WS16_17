@@ -8,7 +8,7 @@ public class ZahlenfolgeZusatz {
 
     public static void main(String args[]) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        int z1 = 0, z2 = 0, t = 0;
+        int z1, z2, t;
         do {
             System.out.println("Geben sie z1 ein: ");
             z1 = Integer.parseInt(in.readLine());
@@ -22,7 +22,7 @@ public class ZahlenfolgeZusatz {
         zahlenausgabe(z1, z2, t);
     }
 
-    public static void zahlenausgabe(int z1, int z2, int t) {
+    private static void zahlenausgabe(int z1, int z2, int t) {
         boolean bumm = false;
         for(int i = z1; i <= z2; i++) {
             int cache = i;
