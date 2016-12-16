@@ -16,7 +16,7 @@ public class Zahlenfolge {
     public static void doppelteSchleife() {
         for(int i = 0; i < 10; i++) {
             for(int j = 0; j < 10; j++) {
-                System.out.println(!(i==0 && j==0) && (i==7 || j==7 || (i*10+j)%7==0) ? "Bumm" : i*10+j);
+                System.out.println(!(i==0 && j==0) && (i==7 || j==7 || (i*10+j)%7==0) ? "Bumm" : (i*10+j));
             }
         }
     }
