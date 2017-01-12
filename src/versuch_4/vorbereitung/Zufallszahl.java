@@ -20,19 +20,21 @@ public class Zufallszahl {
         this.a = a;
         this.b = b;
         this.m = m;
-        this.z = (a * z + b) % m;
         this.start_z = z;
+        this.z = (a * z + b) % m;
     }
 
     public void setSeed(int aw) {
-        this.z = aw;
+        this.start_z = aw;
     }
 
     public void reset() {
         this.z = this.start_z;
     }
 
-    public void nextRand() {
+    public int nextRand() {
+        int c = this.z;
         this.z = (this.a * this.z + this.b) % this.m;
+        return c;
     }
 }
