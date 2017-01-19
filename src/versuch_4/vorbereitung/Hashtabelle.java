@@ -18,7 +18,7 @@ public class Hashtabelle {
             h += (int) s.charAt(i);
         }
 
-        if(this.s[h % s.length()].isEmpty()) {
+        if(this.s[h % s.length()] == null) {
             this.s[h % s.length()] = s;
             return true;
         } else {
@@ -30,6 +30,7 @@ public class Hashtabelle {
         int li = 0, mi, re = this.s.length -1;
         while(true) {
             mi = (int)Math.ceil((re+li)/2.0);
+            if(this.s[mi] == null) return -1;
             if(this.s[mi].equals(s)) return mi;
             if(li == re) return -1;
             for(int x = 0; x < this.s[mi].length(); x++) {
